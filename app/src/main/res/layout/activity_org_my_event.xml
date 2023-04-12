@@ -11,6 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
         <com.google.android.material.button.MaterialButton
             android:id="@+id/org_myEvent_BTN_back"
             android:layout_width="30dp"
@@ -26,7 +31,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
             android:background="#d2bea5"
             android:text="EZ-vent"
             android:textSize="100sp"
@@ -34,6 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/org_my_event_CRD_attendees"
