@@ -11,13 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/org_myEvent_BTN_back"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            app:iconTint="#1B2028"
+            app:icon="@drawable/baseline_arrow_back_ios_24"
+            app:iconGravity="textStart"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_margin="10dp"
             android:background="#d2bea5"
-android:layout_margin="10dp"
             android:text="EZ-vent"
             android:textSize="100sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -106,17 +116,18 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="Arriving" />
+
                         <TextView
+                            android:id="@+id/org_my_event_tvYes"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="0"
-                            android:id="@+id/org_my_event_tvYes"
-                            android:textAlignment="textEnd"
-                            android:textSize="18sp"
-                            android:textColor="@color/color_one"
-                            android:textStyle="bold"
+                            android:layout_alignParentRight="true"
                             android:fontFamily="sans-serif-light"
-                            android:layout_alignParentRight="true"/>
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -139,17 +150,18 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="Not arriving" />
+
                         <TextView
+                            android:id="@+id/org_my_event_tvNo"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="0"
-                            android:id="@+id/org_my_event_tvNo"
-                            android:textAlignment="textEnd"
-                            android:textSize="18sp"
-                            android:textColor="@color/color_one"
-                            android:textStyle="bold"
+                            android:layout_alignParentRight="true"
                             android:fontFamily="sans-serif-light"
-                            android:layout_alignParentRight="true"/>
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -171,17 +183,18 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="No Response Yet" />
+
                         <TextView
+                            android:id="@+id/org_my_event_tvNA"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="0"
-                            android:id="@+id/org_my_event_tvNA"
-                            android:textAlignment="textEnd"
-                            android:textSize="18sp"
-                            android:textColor="@color/color_one"
-                            android:textStyle="bold"
+                            android:layout_alignParentRight="true"
                             android:fontFamily="sans-serif-light"
-                            android:layout_alignParentRight="true"/>
+                            android:text="0"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/color_one"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <!--Text view to display Java text -->
 
@@ -214,24 +227,27 @@ android:layout_margin="10dp"
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
+                    android:id="@+id/org_my_event_BTN_seatingArrangment"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:minLines="2"
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp"
                     android:text="seating arrangements"
                     android:textSize="20sp"
                     app:backgroundTint="#d2bea5"
-                    app:cornerRadius="120dp" />
+                    app:cornerRadius="120dp"
+                    tools:ignore="DuplicateIds" />
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minLines="2"
+                    android:id="@+id/org_my_event_BTN_sendInvatations"
                     android:layout_gravity="center"
+                    android:minLines="2"
                     android:paddingStart="60dp"
                     android:paddingEnd="60dp"
                     android:text="send invatations"
+                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:textSize="20sp"
                     app:backgroundTint="#d2bea5"
                     app:cornerRadius="120dp" />
@@ -240,8 +256,9 @@ android:layout_margin="10dp"
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="98dp"
+                    android:id="@+id/org_my_event_BTN_supplierse"
                     android:layout_gravity="center"
+                    android:paddingStart="98dp"
                     android:paddingEnd="98dp"
                     android:text="suppliers"
                     android:textSize="20sp"
