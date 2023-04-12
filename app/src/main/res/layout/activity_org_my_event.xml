@@ -47,7 +47,7 @@ android:layout_margin="10dp"
                 <!--Pie chart to display the data-->
 
                 <org.eazegraph.lib.charts.PieChart xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/piechart"
+                    android:id="@+id/org_my_event_PCT_attendees"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="15dp"
@@ -58,7 +58,7 @@ android:layout_margin="10dp"
 
                     />
 
-                <!--Creating another linear layout --->
+                <!--Creating another linear layout -->
                 <!-- to display pie chart details -->
                 <LinearLayout
                     android:layout_width="0dp"
@@ -106,6 +106,17 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="Arriving" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/org_my_event_tvYes"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </LinearLayout>
 
@@ -128,6 +139,17 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="Not arriving" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/org_my_event_tvNo"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                     </LinearLayout>
 
@@ -149,9 +171,20 @@ android:layout_margin="10dp"
                             android:layout_height="wrap_content"
                             android:paddingLeft="10dp"
                             android:text="No Response Yet" />
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/org_my_event_tvNA"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
 
                         <!--Text view to display Java text -->
-                        a
+
 
                     </LinearLayout>
 
@@ -207,9 +240,9 @@ android:layout_margin="10dp"
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingStart="90dp"
+                    android:paddingStart="98dp"
                     android:layout_gravity="center"
-                    android:paddingEnd="90dp"
+                    android:paddingEnd="98dp"
                     android:text="suppliers"
                     android:textSize="20sp"
                     app:backgroundTint="#d2bea5"
