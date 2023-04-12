@@ -127,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
-                    android:text="Service staff" />
+                    android:text="Supplier" />
             </LinearLayout>
 
             <LinearLayout
