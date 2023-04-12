@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/org_myEvent_BTN_back"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/baseline_arrow_back_ios_24"
+                app:iconGravity="textStart"
+                app:iconTint="#1B2028" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#d2bea5"
+                android:text="EZ-vent"
+                android:textSize="100sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/worker_main_CRD_main"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_below="@+id/cardViewGraph"
+            android:layout_margin="20dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/worker_my_events_BTN_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="calendar"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="60dp"
+                    android:textSize="25sp"
+                    app:backgroundTint="#d2bea5"
+                    app:cornerRadius="120dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/worker_my_events_BTN_tasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:paddingStart="60dp"
+                    android:paddingEnd="60dp"
+                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
+                    android:text="my tasks"
+                    android:textSize="25sp"
+                    app:backgroundTint="#d2bea5"
+                    app:cornerRadius="120dp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/worker_my_events_BTN_treansferTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
+                    android:text="transfer tasks"
+                    android:textSize="25sp"
+                    app:backgroundTint="#d2bea5"
+                    app:cornerRadius="120dp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/worker_my_events_BTN_finshedTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
+                    android:text="finished tasks"
+                    android:textSize="25sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:backgroundTint="#d2bea5"
+                    app:cornerRadius="120dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

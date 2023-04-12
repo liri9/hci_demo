@@ -43,6 +43,7 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <TextView
+            android:id="@+id/guest_main_LBL_eventName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,7 +54,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/org_my_event_CRD_suppliers"
+            android:id="@+id/guest_main_CRD_card"
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:layout_below="@+id/cardViewGraph"
@@ -73,8 +74,9 @@
                     android:layout_height="0dp"
                     android:layout_weight="1">
 
+
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/org_my_event_BTN_supplierse"
+                        android:id="@+id/guest_main_BTN_confirmation"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -87,7 +89,7 @@
 
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/org_my_event_BTN_sendInvatations"
+                        android:id="@+id/guest_main_BTN_foodRequest"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -108,7 +110,7 @@
                     android:layout_weight="1">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/org_my_event_BTN_seatingArrangment"
+                        android:id="@+id/guest_main_BTN_gift"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -129,6 +131,7 @@
                         android:text="Table number:" />
 
                     <TextView
+                        android:id="@+id/guest_main_LBL_tblNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
