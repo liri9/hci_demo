@@ -28,6 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="50sp"
+        app:backgroundTint="#d2bea5"
+        app:cornerRadius="120dp"
         android:paddingStart="40dp"
         android:paddingEnd="40dp"
         android:text="login"/>
@@ -36,6 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="50sp"
+        app:backgroundTint="#d2bea5"
+        app:cornerRadius="120dp"
         android:text="sign up"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
