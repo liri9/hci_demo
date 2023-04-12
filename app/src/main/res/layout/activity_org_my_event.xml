@@ -66,8 +66,32 @@
             android:paddingEnd="40dp"
             app:backgroundTint="#d2bea5"
             app:cornerRadius="120dp"
-            android:text="login"/>
-
+            android:minLines="2"
+            android:text="send invatations"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            app:backgroundTint="#d2bea5"
+            app:cornerRadius="120dp"
+            android:minLines="2"
+            android:text="suppliers"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            app:backgroundTint="#d2bea5"
+            app:cornerRadius="120dp"
+            android:minLines="2"
+            android:text="seating arrangements"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
