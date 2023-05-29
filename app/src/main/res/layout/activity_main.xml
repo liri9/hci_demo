@@ -7,44 +7,46 @@
     android:layout_height="match_parent"
     android:background="@color/color_white"
     tools:context=".MainActivity">
-<androidx.appcompat.widget.LinearLayoutCompat
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EZ-vent"
-        android:textSize="100sp"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="40sp"
-        app:backgroundTint="#d2bea5"
-        app:cornerRadius="120dp"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
-        android:text="login"/>
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/signUpBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="40sp"
-        app:backgroundTint="#d2bea5"
-        app:cornerRadius="120dp"
-        android:fontFamily=""
-        android:text="sign up"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EZ-vent"
+            android:textSize="100sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="login"
+            android:textSize="40sp"
+            app:backgroundTint="#d2bea5"
+            app:cornerRadius="120dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="sign up"
+            android:textSize="40sp"
+            app:backgroundTint="#d2bea5"
+            app:cornerRadius="120dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

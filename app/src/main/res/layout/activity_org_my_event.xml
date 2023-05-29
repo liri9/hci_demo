@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/poppins_semibold"
                 android:text="EZ-vent"
                 android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -94,7 +93,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
 
                             android:text="Confirmations:"
                             android:textSize="20dp"
@@ -125,7 +123,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
-                            android:fontFamily="@font/poppins_regular"
+
                             android:paddingLeft="10dp"
                             android:text="Arriving" />
 
@@ -134,7 +132,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_regular"
+
                             android:text="0"
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
@@ -160,7 +158,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
+
                             android:paddingLeft="10dp"
                             android:text="Not arriving" />
 
@@ -169,7 +167,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_regular"
+
                             android:text="0"
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
@@ -194,7 +192,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_regular"
+
                             android:paddingLeft="10dp"
 
                             android:text="No Response Yet" />
@@ -204,7 +202,7 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="@font/poppins_regular"
+
                             android:text="0"
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
@@ -245,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_regular"
+
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp"
                     android:text="seating arrangements"
@@ -260,7 +258,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
-                    android:fontFamily="@font/poppins_regular"
+
                     android:minLines="2"
                     android:paddingStart="60dp"
                     android:paddingEnd="60dp"
@@ -275,7 +273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_regular"
+
                     android:paddingStart="98dp"
                     android:paddingEnd="98dp"
                     android:text="suppliers"
