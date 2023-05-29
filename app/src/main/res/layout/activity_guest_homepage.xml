@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/Poppins_SemiBold"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="EZ-vent"
                 android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/Poppins_Regular"
+            android:fontFamily="@font/poppins_regular"
 
             android:text="Israel and Isrela's Wedding:"
             android:textColor="#534a3c"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/Poppins_Regular"
+            android:fontFamily="@font/poppins_regular"
 
             android:text="address: Hashalva 3, Tel Aviv"
             android:textColor="#534a3c"
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:fontFamily="@font/Poppins_Regular"
+                        android:fontFamily="@font/poppins_regular"
 
                         android:layout_margin="5dp"
                         android:text="confirmation"
@@ -112,7 +112,7 @@
                         android:layout_weight="1"
                         android:minLines="2"
                         android:layout_margin="5dp"
-                        android:fontFamily="@font/Poppins_Regular"
+                        android:fontFamily="@font/poppins_regular"
 
                         android:text="food requests"
                         android:textSize="16sp"
@@ -132,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingStart="30dp"
-                        android:fontFamily="@font/Poppins_Regular"
+                        android:fontFamily="@font/poppins_regular"
                         android:paddingEnd="30dp"
                         android:layout_margin="5dp"
                         android:text="give a gift"
@@ -155,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/Poppins_Regular"
+                        android:fontFamily="@font/poppins_regular"
                         android:textColor="#534a3c"
 
                         android:text="----" />

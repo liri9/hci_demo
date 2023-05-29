@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/Poppins_SemiBold"
+            android:fontFamily="@font/poppins_semibold"
             android:text="EZ-vent"
             android:textSize="80sp"
             app:layout_constraintBottom_toBottomOf="parent"

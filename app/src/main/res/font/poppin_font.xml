@@ -3,13 +3,13 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Poppins_Regular" />
+        android:font="@font/poppins_regular" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Poppins_SemiBold" />
+        android:font="@font/poppins_semibold" />
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/Poppins_Thin" />
+        android:font="@font/poppins_thin" />
 </font-family>
