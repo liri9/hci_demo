@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Hci_demo"
         tools:targetApi="31">
         <activity
+            android:name=".RegisterBuisnessActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalendarSupplierActivity"
             android:exported="false" />
         <activity
@@ -34,12 +37,6 @@
             android:exported="false" />
         <activity
             android:name=".Org_MyEvent"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +44,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
