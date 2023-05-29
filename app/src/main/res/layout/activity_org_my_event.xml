@@ -12,21 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/org_myEvent_BTN_back"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_gravity="start"
-            android:background="@android:color/transparent"
-            app:iconTint="#1B2028"
-            app:icon="@drawable/baseline_arrow_back_ios_24"
-            app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/org_myEvent_BTN_back"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                app:icon="@drawable/baseline_arrow_back_ios_24"
+                app:iconGravity="textStart"
+                app:iconTint="#1B2028" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,7 +41,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/org_my_event_CRD_attendees"
@@ -121,18 +123,18 @@
                         <!--Text view to display python text -->
                         <TextView
                             android:layout_width="wrap_content"
-                            android:fontFamily="@font/Poppins_Regular"
-
                             android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/Poppins_Regular"
                             android:paddingLeft="10dp"
                             android:text="Arriving" />
 
                         <TextView
                             android:id="@+id/org_my_event_tvYes"
                             android:layout_width="fill_parent"
-                            android:fontFamily="@font/Poppins_Regular"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:fontFamily="@font/Poppins_Regular"
                             android:text="0"
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
@@ -157,8 +159,8 @@
                         <!--Text view to display C++ text -->
                         <TextView
                             android:layout_width="wrap_content"
-                            android:fontFamily="@font/Poppins_Regular"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/Poppins_Regular"
                             android:paddingLeft="10dp"
                             android:text="Not arriving" />
 
@@ -166,8 +168,8 @@
                             android:id="@+id/org_my_event_tvNo"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/Poppins_Regular"
                             android:layout_alignParentRight="true"
+                            android:fontFamily="@font/Poppins_Regular"
                             android:text="0"
                             android:textAlignment="textEnd"
                             android:textColor="@color/color_one"
@@ -192,8 +194,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingLeft="10dp"
                             android:fontFamily="@font/Poppins_Regular"
+                            android:paddingLeft="10dp"
 
                             android:text="No Response Yet" />
 
@@ -239,14 +241,13 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
                     android:id="@+id/org_my_event_BTN_seatingArrangment"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/Poppins_Regular"
                     android:paddingStart="40dp"
                     android:paddingEnd="40dp"
-                    android:fontFamily="@font/Poppins_Regular"
-
                     android:text="seating arrangements"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
@@ -254,30 +255,28 @@
                     tools:ignore="DuplicateIds" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/org_my_event_BTN_sendInvatations"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/org_my_event_BTN_sendInvatations"
                     android:layout_gravity="center"
-                    android:minLines="2"
+                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:fontFamily="@font/Poppins_Regular"
-
+                    android:minLines="2"
                     android:paddingStart="60dp"
                     android:paddingEnd="60dp"
                     android:text="send invatations"
-                    android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
                     app:cornerRadius="10dp" />
 
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/org_my_event_BTN_supplierse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/org_my_event_BTN_supplierse"
                     android:layout_gravity="center"
-                    android:paddingStart="98dp"
                     android:fontFamily="@font/Poppins_Regular"
-
+                    android:paddingStart="98dp"
                     android:paddingEnd="98dp"
                     android:text="suppliers"
                     android:textSize="20sp"

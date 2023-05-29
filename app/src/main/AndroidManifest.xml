@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Hci_demo"
         tools:targetApi="31">
         <activity
+            android:name=".CalendarSupplierActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrgSendInviteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PastEventsActivity"
+            android:exported="false" />
+        <activity
             android:name=".worker_main"
             android:exported="false" />
         <activity
