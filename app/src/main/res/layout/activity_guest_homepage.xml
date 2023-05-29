@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#e9e8e6"
+
     android:layout_height="match_parent"
-    android:background="@color/color_white"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -33,9 +34,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#d2bea5"
+                android:fontFamily="@font/Poppins_SemiBold"
                 android:text="EZ-vent"
-                android:textSize="100sp"
+                android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +49,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/Poppins_Regular"
+
             android:text="Israel and Isrela's Wedding:"
-            android:textColor="#ac9b89"
+            android:textColor="#534a3c"
+            android:textSize="26dp" />
+        <TextView
+            android:id="@+id/guest_main_LBL_eventAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/Poppins_Regular"
+
+            android:text="address: Hashalva 3, Tel Aviv"
+            android:textColor="#534a3c"
             android:textSize="26dp" />
 
 
@@ -81,11 +95,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:fontFamily="@font/Poppins_Regular"
+
                         android:layout_margin="5dp"
                         android:text="confirmation"
                         android:textSize="16sp"
-                        app:backgroundTint="#d2bea5"
-                        app:cornerRadius="120dp" />
+                        app:backgroundTint="#534a3c"
+                        app:cornerRadius="10dp" />
 
 
                     <com.google.android.material.button.MaterialButton
@@ -97,10 +113,12 @@
                         android:layout_weight="1"
                         android:minLines="2"
                         android:layout_margin="5dp"
+                        android:fontFamily="@font/Poppins_Regular"
+
                         android:text="food requests"
                         android:textSize="16sp"
-                        app:backgroundTint="#d2bea5"
-                        app:cornerRadius="120dp" />
+                        app:backgroundTint="#534a3c"
+                        app:cornerRadius="10dp" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -115,12 +133,13 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingStart="30dp"
+                        android:fontFamily="@font/Poppins_Regular"
                         android:paddingEnd="30dp"
                         android:layout_margin="5dp"
                         android:text="give a gift"
                         android:textSize="16sp"
-                        app:backgroundTint="#d2bea5"
-                        app:cornerRadius="120dp"
+                        app:backgroundTint="#534a3c"
+                        app:cornerRadius="10dp"
                         tools:ignore="DuplicateIds" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -128,6 +147,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:textSize="18dp"
+                        android:textColor="#534a3c"
                         android:text="Table number:" />
 
                     <TextView
@@ -136,6 +156,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:layout_gravity="center"
+                        android:fontFamily="@font/Poppins_Regular"
+                        android:textColor="#534a3c"
 
                         android:text="----" />
 

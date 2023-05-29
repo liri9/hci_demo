@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_white"
+    android:background="#e9e8e6"
+
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -33,9 +34,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#d2bea5"
+                android:fontFamily="@font/Poppins_SemiBold"
                 android:text="EZ-vent"
-                android:textSize="100sp"
+                android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/worker_main_CRD_main"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/cardViewGraph"
             android:layout_margin="20dp"
             android:elevation="10dp"
@@ -65,13 +66,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:layout_margin="5dp"
                     android:text="calendar"
                     android:paddingStart="60dp"
                     android:paddingEnd="60dp"
                     android:textSize="25sp"
-                    app:backgroundTint="#d2bea5"
-                    app:cornerRadius="120dp" />
+                    app:backgroundTint="#534a3c"
+                    app:cornerRadius="10dp" />
 
 
                 <com.google.android.material.button.MaterialButton
@@ -85,8 +88,10 @@
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:text="my tasks"
                     android:textSize="25sp"
-                    app:backgroundTint="#d2bea5"
-                    app:cornerRadius="120dp" />
+                    android:fontFamily="@font/Poppins_Regular"
+
+                    app:backgroundTint="#534a3c"
+                    app:cornerRadius="10dp" />
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/worker_my_events_BTN_treansferTasks"
                     android:layout_width="wrap_content"
@@ -96,8 +101,10 @@
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:text="transfer tasks"
                     android:textSize="25sp"
-                    app:backgroundTint="#d2bea5"
-                    app:cornerRadius="120dp" />
+                    android:fontFamily="@font/Poppins_Regular"
+
+                    app:backgroundTint="#534a3c"
+                    app:cornerRadius="10dp" />
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/worker_my_events_BTN_finshedTasks"
                     android:layout_width="wrap_content"
@@ -107,10 +114,12 @@
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
                     android:text="finished tasks"
                     android:textSize="25sp"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
-                    app:backgroundTint="#d2bea5"
-                    app:cornerRadius="120dp" />
+                    app:backgroundTint="#534a3c"
+                    app:cornerRadius="10dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
 

@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e9e8e6"
+
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -32,64 +34,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#d2bea5"
+                android:fontFamily="@font/Poppins_SemiBold"
                 android:text="EZ-vent"
-                android:textSize="100sp"
+                android:textSize="80sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="e-mail:"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:id="@+id/signup_EDT_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:ems="12" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="password:"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:ems="12"
+            android:hint="email" />
 
         <EditText
+            android:id="@+id/signup_EDT_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:ems="12" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="confirm password:"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:ems="12"
+            android:hint="password"
+            android:inputType="textPassword" />
 
         <EditText
+            android:id="@+id/signup_EDT_repeatPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:ems="12" />
+            android:ems="12"
+            android:hint="confirm password"
+            android:inputType="textPassword" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -97,6 +75,8 @@
             android:layout_marginStart="30dp"
             android:text="account type:"
             android:textSize="30sp"
+            android:fontFamily="@font/Poppins_Regular"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,6 +86,7 @@
             android:id="@+id/accounts_radio_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_gravity="center"
             android:layout_marginStart="15dp"
             android:orientation="vertical">
@@ -118,6 +99,8 @@
                 <RadioButton
                     android:id="@+id/radio_attendee"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     android:text="Event attendee" />
@@ -127,6 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:text="Supplier" />
             </LinearLayout>
 
@@ -138,6 +123,8 @@
                 <RadioButton
                     android:id="@+id/radio_venue_staff"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     android:text="Venue staff" />
@@ -145,6 +132,8 @@
                 <RadioButton
                     android:id="@+id/radio_organizer"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/Poppins_Regular"
+
                     android:layout_height="wrap_content"
                     android:onClick="onRadioButtonClicked"
                     android:text="Event organizer" />
@@ -153,16 +142,16 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/signup_BTN_login"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="20dp"
-            android:paddingStart="40dp"
-            android:paddingEnd="40dp"
             android:text="Sign Up"
             android:textSize="20sp"
-            app:backgroundTint="#d2bea5"
-            app:cornerRadius="120dp" />
+            android:fontFamily="@font/Poppins_Regular"
+            app:backgroundTint="#534a3c"/>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
