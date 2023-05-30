@@ -35,8 +35,6 @@
                 android:layout_gravity="center"
                 android:text="EZ-vent"
                 android:textSize="80sp"
-
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +71,28 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:ems="12"
-            android:hint="price range" />
+            android:hint="Price range" />
+
+        <EditText
+            android:id="@+id/buisnessReg_EDT_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:ems="12"
+            android:hint="Description"
+            android:minLines="3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_BTN_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="submit"
+            android:textSize="20sp"
+            app:backgroundTint="#534a3c"
+            app:cornerRadius="10dp" />
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

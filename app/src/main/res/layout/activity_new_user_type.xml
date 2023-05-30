@@ -43,31 +43,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <EditText
-            android:id="@+id/signup_EDT_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="email" />
 
-        <EditText
-            android:id="@+id/signup_EDT_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="password"
-            android:inputType="textPassword" />
-
-        <EditText
-            android:id="@+id/signup_EDT_repeatPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="confirm password"
-            android:inputType="textPassword" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,13 +118,13 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/signup_BTN_signUp"
+            android:id="@+id/signup_BTN_addUser"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="20dp"
-            android:text="Sign Up"
+            android:text="add user"
             android:textSize="20sp"
 
             app:backgroundTint="#534a3c"/>
