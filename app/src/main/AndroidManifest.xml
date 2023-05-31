@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Hci_demo"
         tools:targetApi="31">
         <activity
+            android:name=".ListTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TasksActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewUserTypeActivity"
             android:exported="false" />
         <activity
@@ -43,7 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".Org_MyEvent"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
