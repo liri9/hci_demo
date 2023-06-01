@@ -56,11 +56,11 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF">
 
-            <FrameLayout
-                android:id="@+id/sup_CRD_list"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tasks_LST_tasks"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="25dp" />
+                tools:listitem="@layout/list_past_events" />
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
     </androidx.appcompat.widget.LinearLayoutCompat>

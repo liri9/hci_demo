@@ -5,13 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
-import com.example.hci_demo.utils.LoginDB;
-import com.example.hci_demo.utils.UserType;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText email;
@@ -19,6 +17,7 @@ public class SignUpActivity extends AppCompatActivity {
     private  EditText confPass;
     private RadioGroup accountType;
     private Button signUpBtn;
+    Class nextClass=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,34 +41,43 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    private void initViews(int id) {
+        signUpBtn.setOnClickListener(v-> {
+            switch (id) {
+                case R.id.radio_attendee:
+
+                    gotoActivity(guest_homepage.class);
+                    break;
+                case R.id.radio_service_staff:
+                    gotoActivity(SupplierActivity.class);
+                    break;
+                case R.id.radio_venue_staff:
+                    gotoActivity(worker_main.class);
+                    break;
+                case R.id.radio_organizer:
+                    gotoActivity(Org_MyEvent.class);
+                    break;
+            }
+            finish();
+        });
+
+    }
+
     public void onRadioButtonClicked(View view) {
-        for (int i = 0; i < accountType.getChildCount(); i++) {
-            View child = accountType.getChildAt(i);
+        ViewGroup parent = (ViewGroup) view.getParent();
+        int childCount = parent.getChildCount();
+
+        for (int i = 0; i < childCount; i++) {
+            View child = parent.getChildAt(i);
             if (child instanceof RadioButton) {
                 RadioButton radioButton = (RadioButton) child;
-                radioButton.setChecked(child.getId() == view.getId());
+                radioButton.setChecked(child == view);
             }
         }
 
-        switch (view.getId()) {
-            case R.id.radio_attendee:
-                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);
-                gotoActivity(guest_homepage.class);
-                break;
-            case R.id.radio_service_staff:
-                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.supplier);
-                gotoActivity(SupplierActivity.class);
-                break;
-            case R.id.radio_venue_staff:
-                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.staff);
-                gotoActivity(worker_main.class);
-                break;
-            case R.id.radio_organizer:
-                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.orginazer);
-                gotoActivity(Org_MyEvent.class);
-                break;
-        }
+        initViews(view.getId());
     }
+
 
     private void gotoActivity(Class cls){
         Intent intent = new Intent(this, cls);

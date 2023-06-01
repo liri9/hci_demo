@@ -170,7 +170,7 @@
                     android:minLines="2"
                     android:paddingStart="60dp"
                     android:paddingEnd="60dp"
-                    android:text="My event"
+                    android:text="My events"
                     android:textSize="20sp"
                     app:backgroundTint="#534a3c"
                     app:cornerRadius="10dp" />

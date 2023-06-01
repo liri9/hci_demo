@@ -51,20 +51,20 @@ public class ListFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ListView listView = view.findViewById(R.id.sup_CRD_list); // Replace with your actual ID
-
-        // Create a list of hardcoded data
-        List<String> dataList = new ArrayList<>();
-        setDataPastEvents(dataList);
-        setDataNextTasks(dataList);
-
-
-
-        // Create an ArrayAdapter to populate the ListView with the data
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, dataList);
-
-        // Set the adapter on the ListView
-        listView.setAdapter(adapter);
+//        ListView listView = view.findViewById(R.id.sup_CRD_list); // Replace with your actual ID
+//
+//        // Create a list of hardcoded data
+//        List<String> dataList = new ArrayList<>();
+//        setDataPastEvents(dataList);
+//        setDataNextTasks(dataList);
+//
+//
+//
+//        // Create an ArrayAdapter to populate the ListView with the data
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, dataList);
+//
+//        // Set the adapter on the ListView
+//        listView.setAdapter(adapter);
     }
 
     private void setDataPastEvents(List dataList) {

@@ -1,159 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#e9e8e6"
-
-    tools:context=".MainActivity">
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="#e9e8e6"
+
+        tools:context=".MainActivity">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/org_myEvent_BTN_back"
-                android:layout_width="30dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="10dp"
-                android:layout_gravity="start"
-                android:background="@android:color/transparent"
-                app:iconTint="#1B2028"
-                app:icon="@drawable/baseline_arrow_back_ios_24"
-                app:iconGravity="textStart"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/org_myEvent_BTN_back"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="start"
+                    android:background="@android:color/transparent"
+                    app:iconTint="#1B2028"
+                    app:icon="@drawable/baseline_arrow_back_ios_24"
+                    app:iconGravity="textStart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text="EZ-vent"
+                    android:textSize="80sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/signup_EDT_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="12"
+                android:hint="email" />
+
+            <EditText
+                android:id="@+id/signup_EDT_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="12"
+                android:hint="password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/signup_EDT_repeatPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="12"
+                android:hint="confirm password"
+                android:inputType="textPassword" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:text="account type:"
+                android:textSize="30sp"
 
-                android:text="EZ-vent"
-                android:textSize="80sp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/accounts_radio_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/radio_attendee"
+
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+
+
+                    <RadioButton
+                        android:id="@+id/radio_attendee"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Event attendee" />
+
+                    <RadioButton
+                        android:id="@+id/radio_service_staff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+                        android:text="Supplier" />
+
+
+
+
+                    <RadioButton
+                        android:id="@+id/radio_venue_staff"
+                        android:layout_width="wrap_content"
+
+
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Venue staff" />
+
+                    <RadioButton
+                        android:id="@+id/radio_organizer"
+                        android:layout_width="wrap_content"
+
+
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Event organizer" />
+
+            </RadioGroup>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signup_BTN_signUp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="20dp"
+                android:text="Sign Up"
+                android:textSize="20sp"
+
+                app:backgroundTint="#534a3c"/>
+
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <EditText
-            android:id="@+id/signup_EDT_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="email" />
-
-        <EditText
-            android:id="@+id/signup_EDT_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="password"
-            android:inputType="textPassword" />
-
-        <EditText
-            android:id="@+id/signup_EDT_repeatPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:ems="12"
-            android:hint="confirm password"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="account type:"
-            android:textSize="30sp"
-
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <RadioGroup
-            android:id="@+id/accounts_radio_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checkedButton="@+id/radio_attendee"
-
-            android:layout_gravity="center"
-            android:layout_marginStart="15dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <RadioButton
-                    android:id="@+id/radio_attendee"
-                    android:layout_width="wrap_content"
-
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Event attendee" />
-
-                <RadioButton
-                    android:id="@+id/radio_service_staff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-
-
-                    android:text="Supplier" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <RadioButton
-                    android:id="@+id/radio_venue_staff"
-                    android:layout_width="wrap_content"
-
-
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Venue staff" />
-
-                <RadioButton
-                    android:id="@+id/radio_organizer"
-                    android:layout_width="wrap_content"
-
-
-                    android:layout_height="wrap_content"
-                    android:onClick="onRadioButtonClicked"
-                    android:text="Event organizer" />
-            </LinearLayout>
-        </RadioGroup>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/signup_BTN_signUp"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_margin="20dp"
-            android:text="Sign Up"
-            android:textSize="20sp"
-
-            app:backgroundTint="#534a3c"/>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-</RelativeLayout>
+    </RelativeLayout>
