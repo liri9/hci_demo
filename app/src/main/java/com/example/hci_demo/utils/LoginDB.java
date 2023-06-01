@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 
 public class LoginDB {
-    private ArrayList<User> vault = new ArrayList<>();
+    private static ArrayList<User> vault = new ArrayList<>();
 
     public LoginDB() {
     }
 
-    public void hardCoded()
+    public static void hardCoded()
     {
         vault.add(new User("avi@food.com", "1111", UserType.supplier));
         vault.add(new User("ravi@food.com", "1111", UserType.supplier));
@@ -25,11 +25,11 @@ public class LoginDB {
         vault.add(new User("guest", "1111", UserType.guest));
         vault.add(new User("orginazer", "1111", UserType.orginazer));
     }
-    public void add(String email, String password, UserType userType)
+    public static void add(String email, String password, UserType userType)
     {
         vault.add(new User(email, password, userType));
     }
-    public User get(String email, String password)
+    public static User get(String email, String password)
     {
         for (User user :
                 vault) {

@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.hci_demo.utils.LoginDB;
 import com.example.hci_demo.utils.UserType;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
         confPass = findViewById(R.id.signup_EDT_repeatPassword);
         accountType = findViewById(R.id.accounts_radio_btn);
 
-        signUpBtn = findViewById(R.id.signup_BTN_login);
+        signUpBtn = findViewById(R.id.signup_BTN_signUp);
         accountType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -52,15 +53,19 @@ public class SignUpActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.radio_attendee:
+                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);
                 gotoActivity(guest_homepage.class);
                 break;
             case R.id.radio_service_staff:
+                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.supplier);
                 gotoActivity(SupplierActivity.class);
                 break;
             case R.id.radio_venue_staff:
+                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.staff);
                 gotoActivity(worker_main.class);
                 break;
             case R.id.radio_organizer:
+                LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.orginazer);
                 gotoActivity(Org_MyEvent.class);
                 break;
         }
