@@ -97,7 +97,7 @@
                     <RadioButton
                         android:id="@+id/radio_attendee"
                         android:layout_width="wrap_content"
-
+                        android:buttonTint="#534a3c"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClicked"
                         android:text="Event attendee" />
@@ -106,7 +106,7 @@
                         android:id="@+id/radio_service_staff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:buttonTint="#534a3c"
 
                         android:text="Supplier" />
 
@@ -117,7 +117,7 @@
                         android:id="@+id/radio_venue_staff"
                         android:layout_width="wrap_content"
 
-
+                        android:buttonTint="#534a3c"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClicked"
                         android:text="Venue staff" />
@@ -126,7 +126,7 @@
                         android:id="@+id/radio_organizer"
                         android:layout_width="wrap_content"
 
-
+                        android:buttonTint="#534a3c"
                         android:layout_height="wrap_content"
                         android:onClick="onRadioButtonClicked"
                         android:text="Event organizer" />

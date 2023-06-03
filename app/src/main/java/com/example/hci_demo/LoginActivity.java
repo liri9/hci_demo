@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.hci_demo.utils.AppManager;
 import com.example.hci_demo.utils.LoginDB;
 import com.example.hci_demo.utils.User;
 import com.example.hci_demo.utils.UserType;
@@ -17,17 +18,18 @@ public class LoginActivity extends AppCompatActivity {
     Button signup_activity_btn;
 
     EditText email;
-
+    AppManager appManager;
     EditText password;
 
     LoginDB loginDB = new LoginDB();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginDB.hardCoded();
-
+        //appManager.init();
         signup_activity_btn = findViewById(R.id.login_BTN_signUp);
         login_btn = findViewById(R.id.login_BTN_login);
         email = findViewById(R.id.login_EDT_email);
@@ -44,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 User user = loginDB.get(email.getText().toString(), password.getText().toString());
+                appManager.getInstance().setLoggedInUser(user);
                 if (user != null){
                     UserType t = user.getType();
                     if(t == UserType.guest){

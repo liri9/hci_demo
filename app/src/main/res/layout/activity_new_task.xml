@@ -64,21 +64,20 @@
             android:layout_marginStart="30dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:text="Team:"-->
+<!--                android:textSize="20sp" />-->
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:text="Team:"
-                android:textSize="20sp" />
-
-            <Spinner
-                android:id="@+id/newTask_SPN_team"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:spinnerMode="dropdown">
-
-            </Spinner>
+                android:background="@android:drawable/btn_dropdown"
+                android:hint="Team"
+                android:entries="@array/team_options_array"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

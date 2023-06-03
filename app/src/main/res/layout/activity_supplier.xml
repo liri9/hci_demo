@@ -10,7 +10,9 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -27,6 +29,7 @@
                 android:background="@android:color/transparent"
                 app:icon="@drawable/baseline_arrow_back_ios_24"
                 app:iconGravity="textStart"
+                android:visibility="invisible"
                 app:iconTint="#1B2028" />
 
             <TextView
@@ -92,8 +95,8 @@
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
-                        android:gravity="center_horizontal"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
 
                         <TextView
                             android:id="@+id/supplier_rating"
@@ -117,6 +120,13 @@
                             android:progressTint="#FFF000"
                             android:rating="4.5" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:id="@+id/supplier_LBL_desceription"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:text="Dsecription:" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -146,15 +156,11 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/org_my_event_BTN_Calendar"
-                    android:layout_width="228dp"
+                    android:id="@+id/sup_my_event_BTN_Calendar"
+                    android:layout_width="245dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
-                    android:paddingStart="40dp"
-                    android:paddingEnd="40dp"
-
-                    android:text="Calendar"
+                    android:text="next events"
                     android:textSize="20sp"
 
                     app:backgroundTint="#534a3c"
@@ -162,41 +168,22 @@
                     tools:ignore="DuplicateIds" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/org_my_event_BTN_events"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/sup_my_event_BTN_events"
+                    android:layout_width="245dp"
                     android:layout_height="48dp"
                     android:layout_gravity="center"
-
                     android:minLines="2"
-                    android:paddingStart="60dp"
-                    android:paddingEnd="60dp"
-                    android:text="My events"
+                    android:text="past events"
                     android:textSize="20sp"
                     app:backgroundTint="#534a3c"
                     app:cornerRadius="10dp" />
 
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/org_my_event_BTN_tasks"
-                    android:layout_width="229dp"
+                    android:id="@+id/sup_my_event_BTN_chat"
+                    android:layout_width="245dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
-                    android:paddingStart="60dp"
-                    android:paddingEnd="60dp"
-                    android:text="tasks"
-                    android:textSize="20sp"
-                    app:backgroundTint="#534a3c"
-                    app:cornerRadius="10dp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/org_my_event_BTN_chat"
-                    android:layout_width="229dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:paddingStart="60dp"
-                    android:paddingEnd="60dp"
                     android:text="Chat"
                     android:textSize="20sp"
                     app:backgroundTint="#534a3c"

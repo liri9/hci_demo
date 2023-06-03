@@ -42,14 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="32dp"
-        android:layout_weight="1"
-        android:elevation="22dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="22dp">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -62,7 +55,6 @@
                 android:layout_height="match_parent"
                 tools:listitem="@layout/list_past_events" />
         </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

@@ -64,7 +64,6 @@ public class SignUpActivity extends AppCompatActivity {
                     gotoActivity(Org_MyEvent.class);
                     break;
             }
-            finish();
         });
 
     }
@@ -88,5 +87,6 @@ public class SignUpActivity extends AppCompatActivity {
     private void gotoActivity(Class cls){
         Intent intent = new Intent(this, cls);
         startActivity(intent);
+        finish();
     }
 }

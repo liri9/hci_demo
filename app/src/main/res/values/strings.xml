@@ -2,4 +2,29 @@
     <string name="app_name">hci_demo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="team_options_array">
+        <item>Cleaning</item>
+        <item>Kitchen</item>
+        <item>Bartenders</item>
+        <item>waiters</item>
+    </string-array>
+
+    <string-array name="supplier_options_array">
+        <item>Catering</item>
+        <item>Flowers</item>
+        <item>DJ</item>
+        <item>Decoration</item>
+        <item>Candies</item>
+    </string-array>
+    By using android:entries, you can provide a fixed set of options directly in the XML file without the need for a separate adapter or code to populate the dropdown items.
+
+    Note that if you need more complex customization or dynamic data for the dropdown options, it's recommended to use a custom adapter and populate the data programmatically. However, if you have a small, static set of options, hard coding them in the XML file can be a convenient approach.
+
+
+
+
+
+
+
 </resources>

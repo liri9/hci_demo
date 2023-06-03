@@ -240,12 +240,11 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/org_my_event_BTN_seatingArrangment"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
-                    android:paddingStart="40dp"
-                    android:paddingEnd="40dp"
+
                     android:text="seating arrangements"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
@@ -254,14 +253,13 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/org_my_event_BTN_sendInvatations"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
 
                     android:minLines="2"
-                    android:paddingStart="60dp"
-                    android:paddingEnd="60dp"
+
                     android:text="send invatations"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
@@ -270,12 +268,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/org_my_event_BTN_supplierse"
-                    android:layout_width="wrap_content"
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
-                    android:paddingStart="98dp"
-                    android:paddingEnd="98dp"
                     android:text="suppliers"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
