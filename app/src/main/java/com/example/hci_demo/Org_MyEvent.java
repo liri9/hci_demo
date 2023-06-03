@@ -2,8 +2,11 @@ package com.example.hci_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.eazegraph.lib.charts.PieChart;
@@ -12,6 +15,8 @@ import org.eazegraph.lib.models.PieModel;
 public class Org_MyEvent extends AppCompatActivity {
     TextView tvYes, tvNo, tvNA;
     PieChart pieChart;
+
+    Button seatingBtn, sendInviteBtn, suppliersBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +24,28 @@ public class Org_MyEvent extends AppCompatActivity {
         findViews();
         initViews();
         updateUI();
+
+        sendInviteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoActivity(OrgSendInviteActivity.class);
+            }
+        });
+
+        seatingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoActivity(TableArrangementActivity.class);
+            }
+        });
+
+        suppliersBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     private void updateUI() {
@@ -51,7 +78,16 @@ public class Org_MyEvent extends AppCompatActivity {
         tvNo = findViewById(R.id.org_my_event_tvNo);
         tvNA = findViewById(R.id.org_my_event_tvNA);
         pieChart = findViewById(R.id.org_my_event_PCT_attendees);
+
+        seatingBtn = findViewById(R.id.org_my_event_BTN_seatingArrangment);
+        sendInviteBtn = findViewById(R.id.org_my_event_BTN_sendInvatations);
+        suppliersBtn = findViewById(R.id.org_my_event_BTN_supplierse);
     }
 
+
+    private void gotoActivity(Class cls){
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
+    }
 
 }
