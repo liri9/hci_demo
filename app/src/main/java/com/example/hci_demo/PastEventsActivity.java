@@ -71,7 +71,7 @@ public class PastEventsActivity extends AppCompatActivity {
 //        tasks_LST_tasks.setAdapter(adapter);
 //    }
     private void updateList(ArrayList<Event> events) {
-        Adapter_Past_Event.updateList(events);
+        adapter.updateList(events);
     }
     private void initList() {
         adapter = new Adapter_Past_Event(eventList);
