@@ -27,7 +27,7 @@ private AppManager appManager;
 
     public void updateList(List<Event> eventList) {
         events = eventList;
-        //notifyDataSetChanged();
+        notifyDataSetChanged();
     }
 
     @NonNull

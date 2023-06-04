@@ -41,10 +41,10 @@ public class Org_MyEvent extends AppCompatActivity {
 
         suppliersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-            }
-        });
+                public void onClick(View v) {
+                    gotoActivity(AllSuppliersActivity.class);
+                }
+            });
 
     }
 
@@ -53,17 +53,17 @@ public class Org_MyEvent extends AppCompatActivity {
                 new PieModel(
                         "Yes",
                         Integer.parseInt(tvYes.getText().toString()),
-                        Color.parseColor("#FFA726")));
+                        Color.parseColor("#fabad9")));
         pieChart.addPieSlice(
                 new PieModel(
                         "No",
                         Integer.parseInt(tvNo.getText().toString()),
-                        Color.parseColor("#66BB6A")));
+                        Color.parseColor("#b4def3")));
         pieChart.addPieSlice(
                 new PieModel(
                         "No Response Yet",
                         Integer.parseInt(tvNA.getText().toString()),
-                        Color.parseColor("#EF5350")));
+                        Color.parseColor("#edd9bd")));
 
     }
 

@@ -45,7 +45,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/org_my_event_CRD_attendees"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="200dp"
             android:layout_below="@+id/cardViewGraph"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -67,7 +67,7 @@
                     android:id="@+id/org_my_event_PCT_attendees"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
                     android:layout_weight="1"
@@ -80,7 +80,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
@@ -195,7 +195,7 @@
 
                             android:paddingLeft="10dp"
 
-                            android:text="No Response Yet" />
+                            android:text="No Response" />
 
                         <TextView
                             android:id="@+id/org_my_event_tvNA"
@@ -222,7 +222,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/org_my_event_CRD_suppliers"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/cardViewGraph"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
@@ -244,7 +244,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
-
+                    android:layout_margin="5dp"
                     android:text="seating arrangements"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
@@ -256,10 +256,10 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_margin="5dp"
+
                     android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
-
                     android:minLines="2"
-
                     android:text="send invatations"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"
@@ -271,6 +271,8 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="suppliers"
                     android:textSize="20sp"
                     app:backgroundTint="#b0c9d2"

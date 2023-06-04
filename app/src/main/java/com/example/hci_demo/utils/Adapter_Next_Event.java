@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Adapter_Next_Event extends RecyclerView.Adapter<Adapter_Next_Event.EventViewHolder> {
 
-private AppManager appManager;
+    private AppManager appManager;
     private  List<Event> events;
 
     public Adapter_Next_Event(List<Event> eventList) {
@@ -41,8 +41,6 @@ private AppManager appManager;
         holder.event_LBL_name.setText(event.getName());
         holder.event_LBL_date.setText(event.getDate().toString());
         holder.event_LBL_description.setText(event.getDescription());
-
-        holder.event_RTG_rating.setRating((float) event.getRating());
     }
 
     @Override
@@ -59,14 +57,12 @@ private AppManager appManager;
         private MaterialTextView event_LBL_description;
         private MaterialTextView event_LBL_name;
         private MaterialTextView event_LBL_date;
-        private AppCompatRatingBar event_RTG_rating;
 
         EventViewHolder(View itemView) {
             super(itemView);
             event_LBL_description = itemView.findViewById(R.id.event_LBL_description);
             event_LBL_name = itemView.findViewById(R.id.event_LBL_name);
             event_LBL_date = itemView.findViewById(R.id.event_LBL_date);
-            event_RTG_rating = itemView.findViewById(R.id.event_RTG_rating);
 
 //            itemView.setOnClickListener(new View.OnClickListener() {
 //                @Override

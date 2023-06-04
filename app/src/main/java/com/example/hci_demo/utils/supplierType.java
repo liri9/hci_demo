@@ -6,4 +6,14 @@ public enum supplierType {
     DJ,
     Decoration,
     Candies,
+    Photography,
+    Videography,
+    LiveMusic,
+    WeddingPlanning,
+    LightingSound,
+    WeddingCakes,
+    Transportation,
+    EventRentals,
+    MakeupHair,
+    Invitations
 }

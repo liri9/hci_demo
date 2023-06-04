@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -46,25 +47,37 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void initViews(int id) {
         signUpBtn.setOnClickListener(v-> {
-            switch (id) {
-                case R.id.radio_attendee:
-                    LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);
-                    gotoActivity(guest_homepage.class);
-                    break;
-                case R.id.radio_service_staff:
-                    LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.supplier);
-                    gotoActivity(SupplierActivity.class);
-                    break;
-                case R.id.radio_venue_staff:
-                    LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.staff);
-                    gotoActivity(worker_main.class);
-                    break;
-                case R.id.radio_organizer:
-                    LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.orginazer);
-                    gotoActivity(Org_MyEvent.class);
-                    break;
+
+            if (email.getText().toString().equals("")){
+                email.setError("item can't be empty");
+
+            }else if(password.getText().toString().equals("")){
+                password.setError("item can't be empty");
+            } else if (confPass.getText().toString().equals("")) {
+                confPass.setError("item can't be empty");
+
             }
-        });
+else {
+                switch (id) {
+                    case R.id.radio_attendee:
+                        LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);
+                        gotoActivity(guest_homepage.class);
+                        break;
+                    case R.id.radio_service_staff:
+                        LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.supplier);
+                        gotoActivity(SupplierActivity.class);
+                        break;
+                    case R.id.radio_venue_staff:
+                        LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.staff);
+                        gotoActivity(worker_main.class);
+                        break;
+                    case R.id.radio_organizer:
+                        LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.orginazer);
+                        gotoActivity(Org_MyEvent.class);
+                        break;
+                }
+
+            } });
 
     }
 
@@ -86,6 +99,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void gotoActivity(Class cls){
         Intent intent = new Intent(this, cls);
+        Log.d("hiiiiiiiiiii",cls.toString());
         startActivity(intent);
         finish();
     }

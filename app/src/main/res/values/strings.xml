@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">hci_demo</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name" >EZ-vent</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_addUser">Add User Type</string>
+    <string name="nav_logout">Log Out</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="team_options_array">
@@ -17,14 +19,20 @@
         <item>Decoration</item>
         <item>Candies</item>
     </string-array>
-    By using android:entries, you can provide a fixed set of options directly in the XML file without the need for a separate adapter or code to populate the dropdown items.
 
-    Note that if you need more complex customization or dynamic data for the dropdown options, it's recommended to use a custom adapter and populate the data programmatically. However, if you have a small, static set of options, hard coding them in the XML file can be a convenient approach.
+    <string-array name="guest_options_array">
+        <item>Friends</item>
+        <item>Work</item>
+        <item>School</item>
+        <item>Army</item>
+    </string-array>
 
+    By using android:entries, you can provide a fixed set of options directly in the XML file
+    without the need for a separate adapter or code to populate the dropdown items.
 
-
-
-
+    Note that if you need more complex customization or dynamic data for the dropdown options, it's
+    recommended to use a custom adapter and populate the data programmatically. However, if you have
+    a small, static set of options, hard coding them in the XML file can be a convenient approach.
 
 
 </resources>

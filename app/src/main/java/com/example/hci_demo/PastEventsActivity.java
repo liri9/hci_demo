@@ -22,7 +22,6 @@ public class PastEventsActivity extends AppCompatActivity {
 
     private Adapter_Past_Event adapter =new Adapter_Past_Event(eventList);;
 
-    listsDB db = new listsDB();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

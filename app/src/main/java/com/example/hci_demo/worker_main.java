@@ -21,7 +21,7 @@ public class worker_main extends AppCompatActivity {
         calendarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoActivity(CalendarSupplierActivity.class);
+                gotoActivity(NextEventsSupplierActivity.class);
             }
         });
 

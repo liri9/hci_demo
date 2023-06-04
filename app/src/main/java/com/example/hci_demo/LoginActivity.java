@@ -12,6 +12,7 @@ import com.example.hci_demo.utils.AppManager;
 import com.example.hci_demo.utils.LoginDB;
 import com.example.hci_demo.utils.User;
 import com.example.hci_demo.utils.UserType;
+import android.view.MenuItem;
 
 public class LoginActivity extends AppCompatActivity {
     Button login_btn;
@@ -45,6 +46,14 @@ public class LoginActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (email.getText().toString().equals("")){
+                    email.setError("item can't be empty");
+
+                }else if(password.getText().toString().equals("")){
+                    password.setError("item can't be empty");
+
+                }
+
                 User user = loginDB.get(email.getText().toString(), password.getText().toString());
                 appManager.getInstance().setLoggedInUser(user);
                 if (user != null){

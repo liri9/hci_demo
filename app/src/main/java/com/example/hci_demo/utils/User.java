@@ -5,15 +5,42 @@ public class User {
     private String password;
     private UserType type;
 
+    private String name;
     private String description;
     private int minPrice;
     private int topPrice;
     private supplierType supType;
+    private float supplierRating;
 
     public User(String email, String password, UserType type) {
         this.email = email;
         this.password = password;
         this.type = type;
+    }
+
+    public User (String name, String description, int minPrice,int topPrice,supplierType type, float rate){
+        this.name = name;
+        this.description = description;
+        this.minPrice = minPrice;
+        this.topPrice = topPrice;
+        this.supType = type;
+        this.supplierRating = rate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public float getSupplierRating() {
+        return supplierRating;
+    }
+
+    public void setSupplierRating(float supplierRating) {
+        this.supplierRating = supplierRating;
     }
 
     public int getMinPrice() {

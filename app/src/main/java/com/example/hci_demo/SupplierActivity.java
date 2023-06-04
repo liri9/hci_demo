@@ -24,7 +24,8 @@ public class SupplierActivity extends AppCompatActivity {
 
     private void initView() {
         sup_my_event_BTN_Calendar.setOnClickListener(view -> {
-
+            Intent intent = new Intent(this, NextEventsSupplierActivity.class);
+            startActivity(intent);
         });
         sup_my_event_BTN_events.setOnClickListener(view -> {
 
