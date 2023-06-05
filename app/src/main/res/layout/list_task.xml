@@ -44,11 +44,12 @@
 
                 <CheckBox
                     android:layout_width="wrap_content"
+                    android:id="@+id/checkBox_task"
                     android:layout_height="wrap_content" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/game_LBL_description"
+                android:id="@+id/task_LBL_description"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

@@ -14,6 +14,7 @@ import android.widget.RadioGroup;
 
 import com.example.hci_demo.utils.LoginDB;
 import com.example.hci_demo.utils.UserType;
+import com.google.android.material.button.MaterialButton;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText email;
@@ -21,13 +22,14 @@ public class SignUpActivity extends AppCompatActivity {
     private  EditText confPass;
     private RadioGroup accountType;
     private Button signUpBtn;
+    MaterialButton org_myEvent_BTN_back;
     Class nextClass=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        org_myEvent_BTN_back = findViewById(R.id.org_myEvent_BTN_back);
         email = findViewById(R.id.signup_EDT_email);
         password = findViewById(R.id.signup_EDT_password);
         confPass = findViewById(R.id.signup_EDT_repeatPassword);
@@ -46,6 +48,10 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void initViews(int id) {
+        org_myEvent_BTN_back.setOnClickListener(view -> {
+            finish();
+        });
+
         signUpBtn.setOnClickListener(v-> {
 
             if (email.getText().toString().equals("")){
@@ -57,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
                 confPass.setError("item can't be empty");
 
             }
-else {
+    else {
                 switch (id) {
                     case R.id.radio_attendee:
                         LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);

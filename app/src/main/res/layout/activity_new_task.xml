@@ -72,7 +72,7 @@
                 >
 
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView_Category"
+                    android:id="@+id/autoCompleteTextView_Team"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:hint="Team"
@@ -91,7 +91,7 @@
         android:minLines="3" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_BTN_login"
+            android:id="@+id/login_BTN_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"

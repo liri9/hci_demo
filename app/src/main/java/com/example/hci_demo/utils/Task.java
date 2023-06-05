@@ -1,23 +1,32 @@
 package com.example.hci_demo.utils;
 
 public class Task {
-    public enum UserType {
-        guest,
-        supplier,
-        staff,
-        orginazer
+    public enum TeamType {
+        Cleaning,
+        Kitchen,
+        Bartenders,
+        Waiters
     }
 
     private boolean complete;
     private String name;
     private String description;
-    private String Team;
-    public Task(boolean complete, String name, String description,String Team) {
+    private TeamType team;
+
+    public Task(boolean complete, String name, String description, TeamType team) {
+
+        this.complete = complete;
+        this.name = name;
+        this.description = description;
+        this.team = team;
+    }
+    public Task(boolean complete, String name, String description) {
 
         this.complete = complete;
         this.name = name;
         this.description = description;
     }
+
     public void setComplete(boolean complete) {
         this.complete = complete;
     }
@@ -40,6 +49,10 @@ public class Task {
 
     public String getDescription() {
         return description;
+    }
+
+    public TeamType getTeam() {
+        return team;
     }
 
     @Override
