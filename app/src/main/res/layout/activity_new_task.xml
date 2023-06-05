@@ -64,20 +64,20 @@
             android:layout_marginStart="30dp"
             android:orientation="horizontal">
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
 
-<!--                android:text="Team:"-->
-<!--                android:textSize="20sp" />-->
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_dropdown"
-                android:hint="Team"
-                android:entries="@array/team_options_array"/>
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_Category"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Team"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

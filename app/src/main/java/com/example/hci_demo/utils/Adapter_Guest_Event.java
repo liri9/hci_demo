@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hci_demo.ChatActivity;
 import com.example.hci_demo.R;
+import com.example.hci_demo.guest_homepage;
 import com.example.hci_demo.utils.Event;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
@@ -43,6 +44,16 @@ public class Adapter_Guest_Event extends RecyclerView.Adapter<Adapter_Guest_Even
             guest_main_BTN_foodRequest  = itemView.findViewById(R.id. guest_main_BTN_foodRequest );
             guest_main_BTN_gift = itemView.findViewById(R.id. guest_main_BTN_gift );
 
+//
+//            guest_main_BTN_confirmation.setOnClickListener(view->{
+//                guest_homepage.getGuest_CRD_confirmation().setVisibility(View.VISIBLE);
+//            });
+//            guest_main_BTN_foodRequest.setOnClickListener(view->{
+//                guest_homepage.getGuest_CRD_food().setVisibility(View.VISIBLE);
+//            });
+//            guest_main_BTN_gift.setOnClickListener(view->{
+//                guest_homepage.getGuest_CRD_gift().setVisibility(View.VISIBLE);
+//            });
 //            events_BTN_chat.setOnClickListener(view -> {
 //                Intent intent = new Intent(view.getContext(), ChatActivity.class);
 //                view.getContext().startActivity(intent);
@@ -76,6 +87,16 @@ public class Adapter_Guest_Event extends RecyclerView.Adapter<Adapter_Guest_Even
         holder.guest_main_LBL_eventAddress.setText(event.getAddress());
         holder.guest_main_LBL_eventDate .setText(event.getsDate());
         holder.guest_main_LBL_tblNumber.setText(event.getTableNum());
+
+//        holder.guest_main_BTN_confirmation.setOnClickListener(view->{
+//            guest_homepage.getGuest_CRD_confirmation().setVisibility(View.VISIBLE);
+//        });
+//        holder.   guest_main_BTN_foodRequest.setOnClickListener(view->{
+//            guest_homepage.getGuest_CRD_food().setVisibility(View.VISIBLE);
+//        });
+//        holder.  guest_main_BTN_gift.setOnClickListener(view->{
+//            guest_homepage.getGuest_CRD_gift().setVisibility(View.VISIBLE);
+//        });
     }
 
 }

@@ -1,23 +1,29 @@
 package com.example.hci_demo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.hci_demo.utils.Adapter_Guest_Event;
 import com.example.hci_demo.utils.Event;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
 
 public class guest_homepage extends AppCompatActivity {
     private RecyclerView guest_LST_events;
-    private MaterialButton org_myEvent_BTN_back;
+    private MaterialButton org_myEvent_BTN_back, gift_BTN_send, confirm_BTN_yes, confirm_BTN_no, food_BTN_send;
+    public static CardView guest_CRD_food;
+    public static CardView guest_CRD_confirmation;
+    public static CardView guest_CRD_gift;
     private ArrayList<Event> eventList = new ArrayList<>();
-    private Adapter_Guest_Event adapter=new Adapter_Guest_Event(eventList);
-
+    private Adapter_Guest_Event adapter = new Adapter_Guest_Event(eventList);
 
 
     @Override
@@ -40,7 +46,30 @@ public class guest_homepage extends AppCompatActivity {
 //            finish();
 //        });
 //
+        gift_BTN_send.setOnClickListener(view -> {
+            guest_CRD_gift.setVisibility(View.INVISIBLE);
+        });
+        confirm_BTN_yes.setOnClickListener(view -> {
+            guest_CRD_confirmation.setVisibility(View.INVISIBLE);
+        });
+        confirm_BTN_no.setOnClickListener(view -> {
+            guest_CRD_confirmation.setVisibility(View.INVISIBLE);
+        });
+        food_BTN_send.setOnClickListener(view -> {
+            guest_CRD_food.setVisibility(View.INVISIBLE);
+        });
+    }
 
+    public static CardView getGuest_CRD_food() {
+        return guest_CRD_food;
+    }
+
+    public static CardView getGuest_CRD_confirmation() {
+        return guest_CRD_confirmation;
+    }
+
+    public static CardView getGuest_CRD_gift() {
+        return guest_CRD_gift;
     }
 
     private void initList() {
@@ -61,8 +90,12 @@ public class guest_homepage extends AppCompatActivity {
     }
 
     private void findViews() {
-     //   org_myEvent_BTN_back = findViewById(R.id.org_myEvent_BTN_back);
+        //   org_myEvent_BTN_back = findViewById(R.id.org_myEvent_BTN_back);
         guest_LST_events = findViewById(R.id.guest_LST_events);
+        gift_BTN_send = findViewById(R.id.gift_BTN_send);
+        confirm_BTN_yes = findViewById(R.id.confirm_BTN_yes);
+        confirm_BTN_no = findViewById(R.id.confirm_BTN_no);
+        food_BTN_send = findViewById(R.id.food_BTN_send);
 
     }
 }

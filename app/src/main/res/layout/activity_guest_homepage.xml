@@ -68,5 +68,176 @@
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/guest_CRD_confirmation"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="50dp"
+    app:cardBackgroundColor="#F8E2C1"
+        android:visibility="invisible"
+        android:elevation="10dp">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Are you coming to the event?"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp">
+
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm_BTN_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="yes"
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText"></com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirm_BTN_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="no"
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/guest_CRD_gift"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="#F8E2C1"
+        android:visibility="invisible"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <EditText
+                android:id="@+id/gift_EDT_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:ems="12"
+                android:hint="Amount"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/gift_BTN_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="send"
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/guest_CRD_food"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="50dp"
+        app:cardBackgroundColor="#F8E2C1"
+        android:visibility="invisible"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <CheckBox
+                android:id="@+id/checkbox_vegan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegan" />
+
+            <CheckBox
+                android:id="@+id/checkbox_vegetarian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetarian" />
+
+            <CheckBox
+                android:id="@+id/checkbox_gluten_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gluten-Free" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="TextSizeCheck">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/food_BTN_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="send"
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
