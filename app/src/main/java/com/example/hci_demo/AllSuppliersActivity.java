@@ -29,9 +29,6 @@ public class AllSuppliersActivity extends AppCompatActivity {
         createList();
         initList();
         initViews();
-
-
-
         updateList(supplierList);
 
     }

@@ -1,105 +1,72 @@
-//package com.example.hci_demo;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import android.os.Bundle;
-//
-//import android.content.Intent;
-//import android.os.Bundle;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//import androidx.lifecycle.Observer;
-//import androidx.recyclerview.widget.LinearLayoutManager;
-//
-//import java.text.SimpleDateFormat;
-//import java.util.ArrayList;
-//import java.util.Date;
-//import java.util.Locale;
-//
-//
-//public class ChatActivity extends AppCompatActivity {
-//
-//    private ActivityChatBinding binding;
-//
-//    private String groupID;
-//    private ChatAdapter chatAdapter;
-//
-//    private ChatViewModel chatViewModel;
-//
-//    private Observer<ArrayList<ChatMessage>> observer = new Observer<ArrayList<ChatMessage>>(){
-//
-//        @Override
-//        public void onChanged(ArrayList<ChatMessage> chatMessages) {
-//            chatAdapter.updateMessages(chatMessages);
-//            if(chatAdapter.getItemCount() > 0){
-//                binding.chatLSTChatLst.smoothScrollToPosition(chatAdapter.getItemCount()-1);
-//            }
-//        }
-//    };
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        binding = ActivityChatBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//
-//        loadReceivedDetails();
-//        initViews();
-//        setListeners();
-//    }
-//
-//    private void initViews() {
-//        chatViewModel = new ChatViewModel(groupID);
-//        chatViewModel.getChatMessages().observe(this,observer);
-//        chatAdapter = new ChatAdapter();
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-//        linearLayoutManager.setStackFromEnd(true);
-//        binding.chatLSTChatLst.setLayoutManager(linearLayoutManager);
-//        binding.chatLSTChatLst.setAdapter(chatAdapter);
-//        User.getInstance().getGroups().get(groupID).setChatMessages(chatViewModel.getMessagesFromDB(groupID));
-//    }
-//
-//
-//    private void setListeners() {
-//        binding.chatBTNBack.setOnClickListener(view -> finish());
-//        binding.chatFABSend.setOnClickListener(view -> sendMessage());
-//    }
-//
-//    private void sendMessage() {
-//        String msg = binding.chatETMsgInput.getText().toString();
-//        if(!msg.isEmpty()){
-//            ChatMessage chatMessage = new ChatMessage(User.getInstance().getUid(),
-//                    User.getInstance().getName(),
-//                    groupID,
-//                    msg,
-//                    getReadableDateTime(new Date()));
-//
-//            User.getInstance().getGroups().get(groupID).getChatMessages().add(chatMessage);
-//            chatViewModel.updateGroupChat(groupID,chatMessage,chatAdapter.getChatMessages().size()+"");
-//            chatViewModel.updateUser();
-//        }
-//        binding.chatETMsgInput.setText(null);
-//    }
-//
-//    private String getReadableDateTime(Date date){
-//        return new SimpleDateFormat("dd MMMM, yyyy - hh:mm a", Locale.getDefault()).format(date);
-//    }
-//
-//
-//
-//    /**
-//     * Loading group chat's name for title and id for updating DB
-//     **/
-//    private void loadReceivedDetails() {
-//        Intent previousIntent = getIntent();
-//        groupID = previousIntent.getStringExtra(Constants.KEY_GROUP_ID);
-//        String groupName = previousIntent.getStringExtra(Constants.KEY_GROUP_NAME);
-//        binding.chatTVGroupName.setText(groupName);
-//    }
-//
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        binding = null;
-//    }
-//}
+package com.example.hci_demo;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.ArrayList;
+
+
+public class ChatActivity extends AppCompatActivity {
+    private MaterialButton org_myEvent_BTN_back;
+    private LinearLayout chatContainer;
+    private TextInputEditText messageInput;
+    private ScrollView chat_SCRL_chat;
+   // private MessageAdapter messageAdapter;
+    private ExtendedFloatingActionButton sendButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_chat);
+     //   messageAdapter = new MessageAdapter();
+
+        findViews();
+        initViews();
+    }
+
+    private void findViews() {
+        org_myEvent_BTN_back = findViewById(R.id.org_myEvent_BTN_back);
+        chatContainer = findViewById(R.id.chatContainer);
+        messageInput = findViewById(R.id.chat_ET_msgInput);
+        sendButton = findViewById(R.id.chat_FAB_send);
+        chat_SCRL_chat = findViewById(R.id.chat_SCRL_chat);
+    }
+
+    private void initViews() {
+        org_myEvent_BTN_back.setOnClickListener(view -> {
+            finish();
+        });
+        sendButton.setOnClickListener(view-> {
+                String message = messageInput.getText().toString();
+                sendMessage(message);
+                messageInput.setText(""); // Clear the input field after sending message
+        });
+
+    }
+    private void sendMessage(String message) {
+        TextView textView = new TextView(this);
+        textView.setText(message);
+        textView.setTextColor(getResources().getColor(android.R.color.white));
+        textView.setBackgroundResource(R.drawable.background_chat_input);
+        textView.setPadding(8, 8, 8, 8);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(0, 0, 0, 8);
+        textView.setLayoutParams(layoutParams);
+
+        // Add the TextView to the chat container
+        chatContainer.addView(textView);
+    }
+}

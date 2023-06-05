@@ -1,79 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity"
-    android:background="@color/cardview_dark_background">
+    android:background="#e9e8e6"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ChatActivity">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/org_myEvent_BTN_back"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/baseline_arrow_back_ios_24"
+        app:iconGravity="textStart"
+        app:iconTint="#1B2028" />
+    <ScrollView
+        android:id="@+id/chat_SCRL_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <View
-        android:id="@+id/chat_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/ic_launcher_background"
-        android:layout_alignBottom="@id/chat_LST_chatLst"/>
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/chat_BTN_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@style/Widget.AppCompat.DrawerArrowToggle"
-        android:layout_marginTop="23dp"
-        android:layout_marginStart="16dp"
-        android:background="@color/white" />
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/chat_TV_groupName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_alignBottom="@id/chat_BTN_back"
-        android:textColor="@color/cardview_dark_background"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chat_LST_chatLst"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/chat_LL_msg"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/chat_BTN_back"
-        android:orientation="vertical"
-        android:padding="20dp" />
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example Chat Messages -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat"
+                android:padding="8dp"
+                android:text=" Hi there! I heard you're organizing a wedding. How can we assist you with the catering?"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat_input"
+                android:padding="8dp"
+                android:text=" Hello! Yes, we're looking for catering services for the wedding. We have around 150 guests. Can you provide a variety of cuisines?"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat"
+                android:padding="8dp"
+                android:text="Absolutely! We offer a diverse menu with options ranging from traditional to international cuisines. Our experienced chefs can create a customized menu tailored to your preferences. Would you like us to arrange a tasting session for you to sample our dishes?"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat_input"
+                android:padding="8dp"
+                android:text=" That sounds great! We would love to try out your dishes before finalizing the menu. Can we schedule a tasting session next week?"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat"
+                android:padding="8dp"
+                android:text=" Of course! I will check our availability and get back to you with some suitable dates. Also, do you have any specific dietary requirements or food preferences we should consider?"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat_input"
+                android:padding="8dp"
+                android:text="Some of our guests have dietary restrictions such as vegetarian and gluten-free options. It would be wonderful if you can accommodate those. Additionally, we prefer fresh, locally sourced ingredients. Is that possible?"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat"
+                android:padding="8dp"
+                android:text="Not a problem at all! We can certainly cater to dietary restrictions and prioritize the use of fresh, locally sourced ingredients. We'll ensure a delightful dining experience for all guests. Is there a specific theme or style you have in mind for the wedding?"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat_input"
+                android:padding="8dp"
+                android:text="The wedding has a rustic theme with a touch of elegance. We would like the catering setup to reflect that as well. Can you suggest some presentation ideas that align with the theme?"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_chat"
+                android:padding="8dp"
+                android:text="Absolutely! We can create rustic-inspired food stations and use natural elements in the presentation, such as wooden boards and vintage tableware. It will complement the overall ambiance of the wedding. We can also discuss specific decorations and arrangements to enhance the visual appeal."
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <LinearLayout
         android:id="@+id/chat_LL_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        >
+        android:layout_marginBottom="20dp">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/chat_ET_msgInput"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/colorAccent"
             android:layout_weight="100"
+            android:background="@drawable/background_chat_input"
+            android:elevation="5dp"
+            android:hint="type_a_message"
             android:imeOptions="actionDone"
             android:inputType="text"
-            android:textColorHint="#ABFFFFFF"
-            android:textColor="@color/white"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:elevation="5dp"
-            />
+            android:textColor="@color/white"
+            android:textColorHint="#ABFFFFFF" />
+
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/chat_FAB_send"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:elevation="10dp"
-            app:icon="@drawable/baseline_arrow_back_ios_24"
             android:layout_marginStart="10dp"
-            app:iconTint="@color/white"
-            android:backgroundTint="@color/purple_500"
-            />
+            android:backgroundTint="#756C5E"
+            android:elevation="10dp"
+            app:icon="@drawable/ic_send"
+            app:iconTint="@color/white" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

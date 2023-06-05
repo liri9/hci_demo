@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" >EZ-vent</string>
+    <string name="app_name">EZ-vent</string>
     <!-- to toggle the open close button of the navigation drawer -->
     <string name="nav_addUser">Add User Type</string>
     <string name="nav_logout">Log Out</string>

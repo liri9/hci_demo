@@ -6,16 +6,50 @@ public class Event {
 
     private Date date;
     private String name;
+    private String address;
     private String description;
+    private String sDate;
+    private String tableNum;
     private double rating;
 
-    public Event ( Date date, String name, String description){
+    public Event(Date date, String name, String description) {
         this.date = date;
         this.name = name;
         this.description = description;
     }
 
-    public Event ( Date date, String name, String description, double rating){
+    public Event(String name, String sDate, String tableNum, String address) {
+        this.name = name;
+        this.sDate = sDate;
+        this.tableNum = tableNum;
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getsDate() {
+        return sDate;
+    }
+
+    public void setsDate(String sDate) {
+        this.sDate = sDate;
+    }
+
+    public String getTableNum() {
+        return tableNum;
+    }
+
+    public void setTableNum(String tableNum) {
+        this.tableNum = tableNum;
+    }
+
+    public Event(Date date, String name, String description, double rating) {
         this.date = date;
         this.name = name;
         this.description = description;

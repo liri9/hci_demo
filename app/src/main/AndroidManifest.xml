@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Hci_demo"
         tools:targetApi="31">
         <activity
+            android:name=".list_guest_events"
+            android:exported="false" />
+        <activity
             android:name=".AllSuppliersActivity"
             android:exported="false" />
         <activity

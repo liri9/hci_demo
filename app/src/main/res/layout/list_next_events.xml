@@ -42,6 +42,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/events_BTN_chat"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"

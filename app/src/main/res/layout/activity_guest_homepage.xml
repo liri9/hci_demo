@@ -27,6 +27,7 @@
                 android:background="@android:color/transparent"
                 app:icon="@drawable/baseline_arrow_back_ios_24"
                 app:iconGravity="textStart"
+                android:visibility="invisible"
                 app:iconTint="#1B2028" />
 
             <TextView
@@ -45,120 +46,24 @@
 
 
         <androidx.cardview.widget.CardView
-
-            android:id="@+id/guest_main_CRD_card"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:layout_below="@+id/cardViewGraph"
-            android:layout_margin="20dp"
-            android:elevation="10dp"
-            app:cardCornerRadius="10dp">
+            android:layout_height="wrap_content"
+            android:elevation="30dp"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="10dp">
 
-            <LinearLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/guest_main_LBL_eventName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
 
-                    android:text="Israel and Isrela's Wedding:"
-                    android:textColor="#534a3c"
-                    android:textSize="26dp" />
-                <TextView
-                    android:id="@+id/guest_main_LBL_eventAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-
-
-                    android:text="address: Hashalva 3, Tel Aviv"
-                    android:textColor="#534a3c"
-                    android:textSize="26dp" />
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
-
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/guest_main_BTN_confirmation"
-                        android:layout_width="210dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:layout_margin="5dp"
-                        android:text="confirmation"
-                        android:textSize="16sp"
-                        app:backgroundTint="#534a3c"
-                        app:cornerRadius="10dp" />
-
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/guest_main_BTN_foodRequest"
-                        android:layout_width="210dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_toStartOf="@+id/org_my_event_BTN_seatingArrangment"
-                        android:layout_weight="1"
-                        android:minLines="2"
-                        android:layout_margin="5dp"
-
-
-                        android:text="food requests"
-                        android:textSize="16sp"
-                        app:backgroundTint="#534a3c"
-                        app:cornerRadius="10dp" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/guest_LST_events"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/guest_main_BTN_gift"
-                        android:layout_width="175dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:text="give a gift"
-                        android:textSize="16sp"
-                        app:backgroundTint="#534a3c"
-                        app:cornerRadius="10dp"
-                        tools:ignore="DuplicateIds" />
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:textSize="18dp"
-                        android:textColor="#534a3c"
-                        android:text="Table number:" />
-
-                    <TextView
-                        android:id="@+id/guest_main_LBL_tblNumber"
-                        android:layout_width="110dp"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:layout_gravity="center"
-
-                        android:textColor="#534a3c"
-
-                        android:text="----" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/list_guest_events" />
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
 

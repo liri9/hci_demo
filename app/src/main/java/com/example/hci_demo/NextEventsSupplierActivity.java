@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.hci_demo.utils.Adapter_Past_Event;
+import com.example.hci_demo.utils.Adapter_Next_Event;
 import com.example.hci_demo.utils.Event;
 import com.google.android.material.button.MaterialButton;
 
@@ -18,7 +18,8 @@ public class NextEventsSupplierActivity extends AppCompatActivity {
     private MaterialButton org_myEvent_BTN_back;
     private ArrayList<Event> eventList = new ArrayList<>();
 
-    private Adapter_Past_Event adapter =new Adapter_Past_Event(eventList);
+    private Adapter_Next_Event adapter=new Adapter_Next_Event(eventList);
+    ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

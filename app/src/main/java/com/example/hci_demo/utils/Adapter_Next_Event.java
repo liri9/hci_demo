@@ -1,5 +1,6 @@
 package com.example.hci_demo.utils;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hci_demo.ChatActivity;
 import com.example.hci_demo.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
@@ -24,13 +27,13 @@ public class Adapter_Next_Event extends RecyclerView.Adapter<Adapter_Next_Event.
 
     public void updateList(List<Event> eventList) {
         events = eventList;
-        //notifyDataSetChanged();
+        notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_past_events, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_next_events, viewGroup, false);
         return new EventViewHolder(view);
     }
 
@@ -57,19 +60,21 @@ public class Adapter_Next_Event extends RecyclerView.Adapter<Adapter_Next_Event.
         private MaterialTextView event_LBL_description;
         private MaterialTextView event_LBL_name;
         private MaterialTextView event_LBL_date;
+        private MaterialButton events_BTN_chat;
+
 
         EventViewHolder(View itemView) {
             super(itemView);
             event_LBL_description = itemView.findViewById(R.id.event_LBL_description);
             event_LBL_name = itemView.findViewById(R.id.event_LBL_name);
             event_LBL_date = itemView.findViewById(R.id.event_LBL_date);
+            events_BTN_chat=itemView.findViewById(R.id.events_BTN_chat);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    onGameClickListener.onClick(v, getItem(getAdapterPosition()), getAdapterPosition());
-//                }
-//            });
+
+            events_BTN_chat.setOnClickListener(view -> {
+                Intent intent = new Intent(view.getContext(), ChatActivity.class);
+                view.getContext().startActivity(intent);
+            });
         }
     }
 

@@ -43,6 +43,14 @@
                     android:text="Hello World!"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="50dp"
+                    android:id="@+id/events_BTN_chat"
+
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:iconTint="@color/black"
+                    app:icon="@drawable/baseline_message_24"/>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <com.google.android.material.textview.MaterialTextView

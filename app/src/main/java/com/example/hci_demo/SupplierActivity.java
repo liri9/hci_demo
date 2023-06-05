@@ -33,6 +33,8 @@ public class SupplierActivity extends AppCompatActivity {
             startActivity(intent);
         });
         sup_my_event_BTN_chat.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ChatActivity.class);
+            startActivity(intent);
 
         });
     }

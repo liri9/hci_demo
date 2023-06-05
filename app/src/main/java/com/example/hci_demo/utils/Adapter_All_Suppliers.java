@@ -1,5 +1,6 @@
 package com.example.hci_demo.utils;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatRatingBar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hci_demo.ChatActivity;
 import com.example.hci_demo.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
@@ -59,6 +62,7 @@ public class Adapter_All_Suppliers extends RecyclerView.Adapter<Adapter_All_Supp
         private MaterialTextView event_LBL_description, sup_LBL_category, sup_LBL_description, sup_LBL_range;
         private MaterialTextView supplier_LBL_name;
         private AppCompatRatingBar sup_RTG_rating;
+        private MaterialButton events_BTN_chat;
 
         EventViewHolder(View itemView) {
             super(itemView);
@@ -68,14 +72,13 @@ public class Adapter_All_Suppliers extends RecyclerView.Adapter<Adapter_All_Supp
             sup_LBL_category = itemView.findViewById(R.id.sup_LBL_category);
             sup_LBL_description = itemView.findViewById(R.id.sup_LBL_description);
             sup_LBL_range = itemView.findViewById(R.id.sup_LBL_range);
+            events_BTN_chat=itemView.findViewById(R.id.events_BTN_chat);
 
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    onGameClickListener.onClick(v, getItem(getAdapterPosition()), getAdapterPosition());
-//                }
-//            });
+            events_BTN_chat.setOnClickListener(view -> {
+                Intent intent = new Intent(view.getContext(), ChatActivity.class);
+                view.getContext().startActivity(intent);
+            });
         }
     }
 
