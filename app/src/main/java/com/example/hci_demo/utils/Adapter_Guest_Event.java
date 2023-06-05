@@ -88,15 +88,15 @@ public class Adapter_Guest_Event extends RecyclerView.Adapter<Adapter_Guest_Even
         holder.guest_main_LBL_eventDate .setText(event.getsDate());
         holder.guest_main_LBL_tblNumber.setText(event.getTableNum());
 
-//        holder.guest_main_BTN_confirmation.setOnClickListener(view->{
-//            guest_homepage.getGuest_CRD_confirmation().setVisibility(View.VISIBLE);
-//        });
-//        holder.   guest_main_BTN_foodRequest.setOnClickListener(view->{
-//            guest_homepage.getGuest_CRD_food().setVisibility(View.VISIBLE);
-//        });
-//        holder.  guest_main_BTN_gift.setOnClickListener(view->{
-//            guest_homepage.getGuest_CRD_gift().setVisibility(View.VISIBLE);
-//        });
+        holder.guest_main_BTN_confirmation.setOnClickListener(view->{
+            guest_homepage.getGuest_CRD_confirmation().setVisibility(View.VISIBLE);
+        });
+        holder.   guest_main_BTN_foodRequest.setOnClickListener(view->{
+            guest_homepage.getGuest_CRD_food().setVisibility(View.VISIBLE);
+        });
+        holder.  guest_main_BTN_gift.setOnClickListener(view->{
+            guest_homepage.getGuest_CRD_gift().setVisibility(View.VISIBLE);
+        });
     }
 
 }

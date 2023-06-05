@@ -46,29 +46,29 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:orientation="horizontal">
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-
-<!--                android:text="category:"-->
-<!--                android:textSize="20sp" />-->
-
-<!--            <Spinner-->
-<!--                android:id="@+id/send_SPN_categories"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginStart="30dp"-->
-<!--                android:spinnerMode="dropdown">-->
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView_Category"
-                android:layout_width="match_parent"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:drawable/btn_dropdown"
-                android:hint="Category"
-                android:entries="@array/supplier_options_array"/>
-<!--            </Spinner>-->
+
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/sup_autoCompleteTextView_Category"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Category"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
         <TextView
@@ -89,8 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:ems="6"
-            android:hint="Price range" />
+            android:ems="3"
+            android:hint="Min Price" />
     <TextView
         android:layout_marginBottom="20dp"
         android:layout_marginStart="5dp"
@@ -103,8 +103,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:ems="6"
-            android:hint="Price range" />
+            android:ems="3"
+            android:hint="Max Price" />
     <TextView
 
         android:layout_marginBottom="20dp"

@@ -13,6 +13,7 @@ import com.example.hci_demo.utils.LoginDB;
 import com.example.hci_demo.utils.User;
 import com.example.hci_demo.utils.UserType;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     Button login_btn;
@@ -67,6 +68,11 @@ public class LoginActivity extends AppCompatActivity {
                     } else if (t == UserType.supplier) {
                         gotoActivity(SupplierActivity.class);
                     }
+
+                }
+                else {
+                    Toast.makeText(LoginActivity.this, "User not found",
+                            Toast.LENGTH_LONG).show();
                 }
             }
         });

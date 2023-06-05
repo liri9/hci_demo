@@ -38,6 +38,7 @@ public class SignUpActivity extends AppCompatActivity {
         signUpBtn = findViewById(R.id.signup_BTN_signUp);
         accountType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
+
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (password.getText().toString() == confPass.getText().toString()) {
                     RadioButton radioButton = findViewById(checkedId);
@@ -53,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         signUpBtn.setOnClickListener(v-> {
-
+            //gotoActivity(RegisterBuisnessActivity.class);
             if (email.getText().toString().equals("")){
                 email.setError("item can't be empty");
 
@@ -62,8 +63,8 @@ public class SignUpActivity extends AppCompatActivity {
             } else if (confPass.getText().toString().equals("")) {
                 confPass.setError("item can't be empty");
 
-            }
-    else {
+            } else {
+
                 switch (id) {
                     case R.id.radio_attendee:
                         LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.guest);
@@ -71,7 +72,8 @@ public class SignUpActivity extends AppCompatActivity {
                         break;
                     case R.id.radio_service_staff:
                         LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.supplier);
-                        gotoActivity(SupplierActivity.class);
+//                        Log.d("hi","loggggg service");
+                        gotoActivity(RegisterBuisnessActivity.class);
                         break;
                     case R.id.radio_venue_staff:
                         LoginDB.add(email.getText().toString(), password.getText().toString(), UserType.staff);
@@ -83,7 +85,8 @@ public class SignUpActivity extends AppCompatActivity {
                         break;
                 }
 
-            } });
+            }
+    });
 
     }
 
@@ -105,7 +108,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void gotoActivity(Class cls){
         Intent intent = new Intent(this, cls);
-        Log.d("hiiiiiiiiiii",cls.toString());
         startActivity(intent);
         finish();
     }

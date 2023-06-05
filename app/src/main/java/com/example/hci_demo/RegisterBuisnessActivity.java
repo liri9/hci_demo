@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,11 +25,12 @@ public class RegisterBuisnessActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_buisness);
         findViews();
+        setValues();
         initViews();
     }
 
     private void findViews() {
-        category = findViewById(R.id.autoCompleteTextView_Category);
+        category = findViewById(R.id.sup_autoCompleteTextView_Category);
         minPrice = findViewById(R.id.buisnessReg_EDT_minPrice);
         maxPrice = findViewById(R.id.buisnessReg_EDT_maxPrice);
         description = findViewById(R.id.buisnessReg_EDT_description);
@@ -42,15 +44,21 @@ public class RegisterBuisnessActivity extends AppCompatActivity {
                 Toast.makeText(this, "Fill all fields", Toast.LENGTH_SHORT).show();
                 return;
             } else {
-                appManager.getLoggedInUser().setDescription(description.getText().toString());
-                appManager.getLoggedInUser().setMinPrice(Integer.valueOf(minPrice.getText().toString()));
-                appManager.getLoggedInUser().setTopPrice(Integer.valueOf(maxPrice.getText().toString()));
-                appManager.getLoggedInUser().setSupType(category.getText().toString());
+//                appManager.getLoggedInUser().setDescription(description.getText().toString());
+//                appManager.getLoggedInUser().setMinPrice(Integer.valueOf(minPrice.getText().toString()));
+//                appManager.getLoggedInUser().setTopPrice(Integer.valueOf(maxPrice.getText().toString()));
+//                appManager.getLoggedInUser().setSupType(category.getText().toString());
                 Intent intent = new Intent(this, SupplierActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
+    }
+
+    private void setValues() {
+        String[] categories = getResources().getStringArray(R.array.supplier_options_array);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.drop_down_menu, categories);
+        category.setAdapter(arrayAdapter);
     }
 }

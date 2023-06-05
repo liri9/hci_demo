@@ -96,6 +96,9 @@ public class guest_homepage extends AppCompatActivity {
         confirm_BTN_yes = findViewById(R.id.confirm_BTN_yes);
         confirm_BTN_no = findViewById(R.id.confirm_BTN_no);
         food_BTN_send = findViewById(R.id.food_BTN_send);
+        guest_CRD_confirmation= findViewById(R.id.guest_CRD_confirmation);
+        guest_CRD_gift = findViewById(R.id.guest_CRD_gift);
+        guest_CRD_food= findViewById(R.id.guest_CRD_food);
 
     }
 }
